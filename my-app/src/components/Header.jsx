@@ -12,13 +12,14 @@
 
 import React from 'react';
 import Sidebar from './Sidebar';
-import logo from '../logoo.svg';
 
 const Header = ({ homeRef, aboutRef, contactRef, scrollToSection }) => {
   return (
     // The header element contains the logo and the sidebar
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
+    <header className="App-header" style={{ height: '1vh' }}>
+      
+      <h1> PROJEKTNAME </h1>
+      
       <Sidebar
         // References to the sections
         homeRef={homeRef}
