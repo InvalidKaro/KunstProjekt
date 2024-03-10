@@ -6,11 +6,16 @@
     left: 0;
     height: 100vh;
     width: 200px; /* Adjust width as needed */
-    background-color: #333; /* Adjust background color as needed */
+    background-color: rgba(51, 51, 51, 0.8); /* Adjust background color and opacity as needed */
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    z-index: 1; /* Ensure sidebar is on top of other elements */}
+
+.sidebar:hover {
+    background-color: rgba(51, 51, 51, 0.95); /* Adjust hover background color and opacity as needed */
 }
 
 .sidebar ul {
@@ -22,14 +27,37 @@
     padding: 10px;
     color: #fff; /* Adjust text color as needed */
     cursor: pointer;
+    position: relative; /* Required for pseudo-element positioning */
 }
 
-.sidebar ul li:hover {
-    background-color: #555; /* Adjust hover background color as needed */
+.sidebar ul li:before,
+.sidebar ul li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px; /* Adjust thickness of the lines as needed */
+    background-color: #fff; /* Adjust line color as needed */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
 }
 
-.sidebar ul li.active {
-    background-color: #555; /* Adjust active background color as needed */
+.sidebar ul li:hover:before,
+.sidebar ul li:hover:after {
+    opacity: 1; /* Show lines on hover */
+}
+
+.sidebar ul li:before {
+    left: -6px; /* Position the left line */
+}
+
+.sidebar ul li:after {
+    right: -6px; /* Position the right line */
+}
+
+.sidebar ul li.active:before,
+.sidebar ul li.active:after {
+    opacity: 1; /* Show lines for active item */
 }
 
 .sidebar li {

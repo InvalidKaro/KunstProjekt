@@ -4,9 +4,10 @@
 
 import React, { useRef } from 'react';
 import './App.css';
+
 import Header from './components/Header';
-import Section from './components/Section';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import Section from './components/Section';
 
 function App() {
   // We create three refs to the sections of our web app. These refs will be
@@ -51,6 +52,7 @@ function App() {
           // We pass the ref to the Home section to the Section component so
           // that it can scroll to it when the link is clicked.
           title="Home Section"
+          style={{ backgroundColor: 'lightblue' }}
           ref={homeRef}
         >
           <p>This is where our website could be.</p>
