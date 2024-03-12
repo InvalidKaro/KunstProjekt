@@ -16,7 +16,7 @@ import Sidebar from './Sidebar';
 
 document.title = "Above the Surface";
 
-const Header = ({ homeRef, aboutRef, contactRef, oneRef, twoRef, threeRef,scrollToSection }) => {
+const Header = ({ homeRef, aboutRef, contactRef, oneRef, twoRef, threeRef, lawRef, scrollToSection }) => {
   return (
     // The header element contains the logo and the sidebar
     <header className="App-header">
@@ -30,6 +30,7 @@ const Header = ({ homeRef, aboutRef, contactRef, oneRef, twoRef, threeRef,scroll
         oneRef={oneRef}
         twoRef={twoRef}
         threeRef={threeRef}
+        lawRef={lawRef}
         // The function to scroll to a specific section
         scrollToSection={scrollToSection}
       />

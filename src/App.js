@@ -7,30 +7,30 @@ import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
 import React, { useEffect, useRef, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import "./App.css";
+import bg from "./bg.mp4";
 import Header from "./components/Header";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Section from "./components/Section";
-import vidOne from "./one.mp4";
-import vidThree from "./three.mp4";
-import vidTwo from "./two.mp4";
+import oceanPlastic from "./images/ocean-bound-plastic-1024x536.jpg";
+import plasticIsland from "./images/plasticisland.jpg";
+import plasticTruck from "./images/plasticjunktruck.jpeg";
+/**
+ * We create three refs to the sections of our web app. These refs will be
+ * passed to the Header component so that it can scroll to the respective
+ * section when a link is clicked.
+ */
 function App() {
   // We create three refs to the sections of our web app. These refs will be
   // passed to the Header component so that it can scroll to the respective
   // section when a link is clicked.
   const [warnung, setWarnung] = useState("");
   const homeRef = useRef(null);
-  const [video, setVideo] = useState(vidOne);
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
   const oneRef = useRef(null);
   const twoRef = useRef(null);
   const threeRef = useRef(null);
-  const ReactImg =
-    "https://coreui.io/react/docs/static/react-83088efde08a5dedde9f67a954cb4b5b.jpg";
-  const VueImg =
-    "https://coreui.io/react/docs/static/vue-8a74d93fde1a02c247304291cce46797.jpg";
-  const AngularImg =
-    " https://coreui.io/react/docs/static/angular-2f3764e2ec8b0b47ebe68f2f80260ef1.jpg";
+  
 
   // This function is passed to the Header component so that it can call it
   // when a link is clicked. The function will scroll to the section that the
@@ -43,7 +43,6 @@ function App() {
 
   useEffect(() => {
     changeWarnung();
-    changeVid();
   }, []);
   const changeWarnung = () => {
     setWarnung("erkennen");
@@ -61,21 +60,8 @@ function App() {
     }, 5000);
   };
 
-  const changeVid = () => {
-    setVideo("erkennen");
-    // make a timed changing
-    setTimeout(() => {
-      setVideo({vidOne});
-    }, 1000);
 
-    setTimeout(() => {
-      setVideo({vidTwo});
-    }, 3000);
-    // Loop
-    setTimeout(() => {
-      changeWarnung();
-    }, 5000);
-  };
+  
   // TODO: Fade in out etc
 
   // This function is called when the scroll-to-top button is clicked. It
@@ -108,6 +94,8 @@ function App() {
           loop
           autoPlay
           muted
+          playsInline
+
           style={{
             position: "absolute",
             top: 0,
@@ -118,11 +106,9 @@ function App() {
             zIndex: -1,
           }}
         >
-          <source src={video} type="video/mp4" />
-          <source src={vidTwo} type="video/mp4" />
-          <source src={vidThree} type="video/mp4" />
+        <source src={bg} type="video/mp4" />
 
-          Your browser does not support the video tag.
+          Ihr Browser unterstützt leider das `video` Tag nicht. Bitte versuchen Sie einen anderen Browser.
         </video>
         <Section
           // We pass the ref to the Home section to the Section component so
@@ -134,6 +120,7 @@ function App() {
             overflow: "hidden",
             width: "100vw",
             height: "100vh",
+            zIndex: -1,
           }}
           ref={homeRef}
         >
@@ -148,7 +135,7 @@ function App() {
         </Section>
 
         <Section
-          title="Gefahr Section"
+          title="Die Gefahr"
           style={{ backgroundColor: "black", color: "white" }}
           ref={aboutRef}
         >
@@ -162,7 +149,7 @@ function App() {
             <CCarouselItem>
               <CImage
                 className="d-block w-100"
-                src={ReactImg}
+                src={oceanPlastic}
                 alt="slide 1"
                 style={{ maxHeight: "300px", objectFit: "cover" }}
               />
@@ -170,7 +157,7 @@ function App() {
             <CCarouselItem>
               <CImage
                 className="d-block w-100"
-                src={VueImg}
+                src={plasticIsland}
                 alt="slide 2"
                 style={{ maxHeight: "300px", objectFit: "cover" }}
               />
@@ -178,7 +165,7 @@ function App() {
             <CCarouselItem>
               <CImage
                 className="d-block w-100"
-                src={AngularImg}
+                src={plasticTruck}
                 alt="slide 3"
                 style={{ maxHeight: "300px", objectFit: "cover" }}
               />
