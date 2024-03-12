@@ -21,7 +21,6 @@ const Header = ({ homeRef, aboutRef, contactRef, oneRef, twoRef, threeRef,scroll
     // The header element contains the logo and the sidebar
     <header className="App-header">
       
-      <h1> Above the Surface </h1>
       
       <Sidebar
         // References to the sections
