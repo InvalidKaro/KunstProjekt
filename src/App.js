@@ -52,7 +52,7 @@ function App() {
     }, 1000);
 
     setTimeout(() => {
-      setWarnung("Handeln");
+      setWarnung("handeln");
     }, 3000);
     // Loop
     setTimeout(() => {
@@ -142,6 +142,7 @@ function App() {
           <h2>Die Meere versinken im Müll</h2>
           <CCarousel
             controls
+            interval={4000}
             indicators
             className="d-flex justify-content-center align-items-center"
             style={{ maxWidth: "500px", margin: "0 auto" }}
@@ -182,7 +183,7 @@ function App() {
           ref={contactRef}
         >
           Wir müssen
-          <Fade direction="up" in>
+          <Fade direction="up" in >
             {warnung}
           </Fade>
         </Section>
@@ -232,6 +233,8 @@ function App() {
         />
       </div>
     </div>
+
+    
   );
 }
 
