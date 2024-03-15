@@ -40,11 +40,7 @@ function App() {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  useEffect(() => {
-    changeWarnung();
-  }, [changeWarnung]);
-  const changeWarnung = () => {
+  const changeWarnung = useCallback(() => {
     setWarnung("erkennen");
     // make a timed changing
     setTimeout(() => {
@@ -58,7 +54,12 @@ function App() {
     setTimeout(() => {
       changeWarnung();
     }, 5000);
-  };
+  }, []); // No dependencies for useCallback, as it doesn't reference any external variables
+
+  useEffect(() => {
+    // Call changeWarnung function on mount
+    changeWarnung();
+  }, [changeWarnung]); // Include changeWarnung in the dependency array
 
 
   
