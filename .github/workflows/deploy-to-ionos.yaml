@@ -1,14 +1,3 @@
-It seems like there are a few issues in your GitHub Actions workflow. Let's address them:
-
-1. **Typo in `require` in `workflow_dispatch` event inputs**: You have a typo in the `require` field. It should be `required`.
-
-2. **Concurrency matrix value**: It seems like you are trying to set the `concurrency` matrix to the value of `github.ref`, but the syntax is incorrect. You need to use `${{ matrix.branch-id }}` to access the value from the matrix.
-
-3. **Error in `Fetch deployment info` step**: In the `data` input for the `Render templates` step, you're trying to access `steps.deployment.outputs.template-variables`, which seems incorrect. It should be `steps.template.outputs.template-variables`.
-
-Here's the corrected workflow:
-
-```yaml
 name: "Deploy Now: Deploy to IONOS"
 
 on:
