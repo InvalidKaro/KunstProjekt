@@ -43,7 +43,7 @@ function App() {
 
   useEffect(() => {
     changeWarnung();
-  }, []);
+  }, [changeWarnung]);
   const changeWarnung = () => {
     setWarnung("erkennen");
     // make a timed changing
