@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "https://above-the-surface.invalidkaro.dev",
+  "homepage": "./",
 
   "version": "0.1.0",
   "private": true,
