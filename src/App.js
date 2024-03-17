@@ -1,6 +1,6 @@
 import "@coreui/coreui/dist/css/coreui.min.css";
 import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import "./App.css";
 import bg from "./bg.mp4";
