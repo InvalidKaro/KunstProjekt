@@ -1,7 +1,3 @@
-// App.js
-// This is the main component of our app. It contains the header, content and
-// the scroll-to-top button.
-
 import "@coreui/coreui/dist/css/coreui.min.css";
 import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
 import React, { useEffect, useRef, useState } from "react";
@@ -142,10 +138,10 @@ function App() {
           <h2>Die Meere versinken im Müll</h2>
           <CCarousel
             controls
-            interval={4000}
+            interval={3000}
             indicators
             className="d-flex justify-content-center align-items-center"
-            style={{ maxWidth: "500px", margin: "0 auto" }}
+            style={{ maxWidth: "800px", margin: "2rem auto" }}
           >
             <CCarouselItem>
               <CImage
