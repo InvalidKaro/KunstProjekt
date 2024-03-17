@@ -5,6 +5,7 @@ import { Fade } from "react-awesome-reveal";
 import "./App.css";
 import bg from "./bg.mp4";
 import Header from "./components/Header";
+import PasswordComponent from "./components/Password";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Section from "./components/Section";
 import oceanPlastic from "./images/ocean-bound-plastic-1024x536.jpg";
@@ -71,6 +72,7 @@ function App() {
   };
 
   return (
+    <PasswordComponent>
     <div className="App">
       <Header
         // We pass the refs to the Header so that it can scroll to the
@@ -230,7 +232,7 @@ function App() {
         />
       </div>
     </div>
-
+    </PasswordComponent>
     
   );
 }
