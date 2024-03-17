@@ -1,6 +1,6 @@
 import "@coreui/coreui/dist/css/coreui.min.css";
 import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Fade } from "react-awesome-reveal";
 import "./App.css";
 import bg from "./bg.mp4";
@@ -36,11 +36,7 @@ function App() {
       ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  useEffect(() => {
-    changeWarnung();
-  }, []);
-  const changeWarnung = () => {
+  const changeWarnung = useCallback(() => {
     setWarnung("erkennen");
     // make a timed changing
     setTimeout(() => {
@@ -54,7 +50,12 @@ function App() {
     setTimeout(() => {
       changeWarnung();
     }, 5000);
-  };
+  }, []); // No dependencies for useCallback, as it doesn't reference any external variables
+
+  useEffect(() => {
+    // Call changeWarnung function on mount
+    changeWarnung();
+  }, [changeWarnung]); // Include changeWarnung in the dependency array
 
 
   

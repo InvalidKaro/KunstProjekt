@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: ./
+  DEPLOYMENT_FOLDER: dist
 
 jobs:
 # Please do not rename this job
@@ -30,14 +30,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: v18
+          node-version: v20.x
 
       - name: Build Node assets
         env:
-          CI: false
+          CI: true
           SITE_URL: ${{ inputs.site-url }}
         run: |
-          npm install
+          npm ci
           npm run build
 
 # Please do not touch the following action
@@ -46,7 +46,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: 5c4773d6-b435-44e8-a7cb-2adfdc5e0cf8
+          project-id: 4b6edcfc-1638-4889-95df-83a2356be7b5
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
