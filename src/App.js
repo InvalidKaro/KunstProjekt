@@ -146,26 +146,26 @@ function App() {
           >
             <CCarouselItem>
               <CImage
-                className="d-block w-100"
+                className="d-block w-500"
                 src={oceanPlastic}
                 alt="slide 1"
-                style={{ maxHeight: "300px", objectFit: "cover" }}
+                style={{ maxHeight: "500px", objectFit: "cover" }}
               />
             </CCarouselItem>
             <CCarouselItem>
               <CImage
-                className="d-block w-100"
+                className="d-block w-500"
                 src={plasticIsland}
                 alt="slide 2"
-                style={{ maxHeight: "300px", objectFit: "cover" }}
+                style={{ maxHeight: "500px", objectFit: "cover" }}
               />
             </CCarouselItem>
             <CCarouselItem>
               <CImage
-                className="d-block w-100"
+                className="d-block w-500"
                 src={plasticTruck}
                 alt="slide 3"
-                style={{ maxHeight: "300px", objectFit: "cover" }}
+                style={{ maxHeight: "500px", objectFit: "cover" }}
               />
             </CCarouselItem>
           </CCarousel>
