@@ -134,17 +134,17 @@ function App() {
           </Section>
 
           <Section
-            title="Die Gefahr"
+            title="Die Meere versinken im Müll"
             style={{ backgroundColor: "black", color: "white" }}
             ref={aboutRef}
           >
-            <h2>Die Meere versinken im Müll</h2>
+            <h2> </h2>
             <CCarousel
               controls
               interval={3000}
               indicators
               className="d-flex justify-content-center align-items-center"
-              style={{ maxWidth: "1000px", margin: "2rem auto" }}
+              style={{ maxWidth: "1000px", marginLeft: "150px" }}
             >
               <CCarouselItem>
                 <CImage

@@ -13,7 +13,7 @@ a:hover {
 	text-decoration: none;
 }
 .link {
-  color: #ffeba7;
+  color: rgba(180, 176, 164, 0.184);
 }
 .link:hover {
   color: #c4c3ca;
