@@ -23,8 +23,8 @@ const Section = React.forwardRef(function SectionComponent({ title, style, child
           section, we use the JSX syntax {children} to insert them */
       }
       <Fade  direction='up' cascade delay={100}>
-        <div style={{width: "100%"}}>
-      <h1 style={{ fontSize: "2.5em", textShadow: "2px 2px 4px rgba(180, 176, 164, 0.233)" }}>{title}</h1>
+        <div style={{width: "120%"}}>
+      <h1 style={{ letterSpacing:"0.1em", fontSize: "2.5em", textShadow: "2px 2px 4px rgba(180, 176, 164, 0.233)" }}>{title}</h1>
       {children}
       </div>
       </Fade>

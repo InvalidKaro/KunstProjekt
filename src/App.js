@@ -142,8 +142,7 @@ function App() {
             <CCarousel
               controls
               interval={3000}
-              indicators
-              className="d-flex justify-content-center align-items-center"
+              className="d-flex justify-content-center align-items-end"
               style={{ maxWidth: "1000px", marginLeft: "150px" }}
             >
               <CCarouselItem>
@@ -153,8 +152,10 @@ function App() {
                   alt="slide 1"
                   style={{
                     maxHeight: "550px",
-                    objectFit: "cover",
+                    objectFit: "fill",
                     borderRadius: "10px",
+                    marginLeft: "130px",
+
                   }}
                 />
               </CCarouselItem>
@@ -165,8 +166,10 @@ function App() {
                   alt="slide 2"
                   style={{
                     maxHeight: "550px",
-                    objectFit: "cover",
+                    objectFit: "fill",
                     borderRadius: "10px",
+                    marginLeft: "130px",
+
                   }}
                 />
               </CCarouselItem>
@@ -177,15 +180,16 @@ function App() {
                   alt="slide 3"
                   style={{
                     maxHeight: "550px",
-                    objectFit: "cover",
+                    objectFit: "fill",
                     borderRadius: "10px",
+                    marginLeft: "130px",
                   }}
                 />
               </CCarouselItem>
             </CCarousel>
           </Section>
           <Section
-            title="Warnung"
+            title="Wir müssen"
             style={{
               backgroundColor: "white",
               color: "#377f7e",
@@ -193,7 +197,7 @@ function App() {
             }}
             ref={contactRef}
           >
-            Wir müssen
+          
             <Fade direction="up" in>
               {warnung}
             </Fade>
