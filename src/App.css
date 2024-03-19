@@ -114,3 +114,6 @@ align-self: center;}
 align-self: center; }
 
 .pic3 { grid-area: 3 / 5 / 6 / 8; }
+
+.row {
+}
