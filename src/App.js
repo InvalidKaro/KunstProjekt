@@ -146,11 +146,11 @@ function App() {
           </Section>
 
           <Section
-            title="Die Meere versinken im Müll"
+            title="  "
             style={{ backgroundColor: "black", color: "white" }}
             ref={aboutRef}
           >
-            <h2> </h2>
+            <h2> Die Meere versinken im Müll </h2>
             {/* Carousel  add text here*/}
             <CCarousel
               controls
@@ -207,10 +207,11 @@ function App() {
               backgroundColor: "white",
               color: "#377f7e",
               fontWeight: "bold",
+            
             }}
             ref={contactRef}
           >
-            <Fade direction="up" in>
+            <Fade direction="up" in style={{ fontSize:"2em"}}>
               {warnung}
             </Fade>
           </Section>
@@ -298,15 +299,32 @@ function App() {
                 <p>Action</p>
               </div>
             </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <footer style={{ }}>
+            <p>Created by invalidkaro &middot; &copy; 2024</p>
+<p> All rights reserved.</p>
+<p> Made with love.</p>
+
+
+            </footer>
           </Section>
 
-          <Section
-            title="+3 Section"
-            style={{ backgroundColor: "white" }}
-            ref={threeRef}
-          >
-            <p>Contact us here.</p>
-          </Section>
+        
+<Section
+  title="Contact Us"
+  style={{ backgroundColor: "#f2f2f2" }}
+  ref={contactRef}
+>
+
+</Section>
+
           <ScrollToTopButton
             // When the button is clicked, the scrollToTop function is called.
             onClick={scrollToTop}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../style/Sidebar.css';
 
-const Sidebar = ({ homeRef, aboutRef, contactRef, xRef, oneRef, twoRef, threeRef, scrollToSection }) => {
+const Sidebar = ({ homeRef, aboutRef, contactRef, oneRef, twoRef, threeRef, scrollToSection }) => {
     const [activeSection, setActiveSection] = useState(null);
    
     useEffect(() => {
@@ -14,8 +14,6 @@ const Sidebar = ({ homeRef, aboutRef, contactRef, xRef, oneRef, twoRef, threeRef
           setActiveSection(aboutRef);
         } else if (scrollPosition >= contactRef.current.offsetTop && scrollPosition < oneRef.current.offsetTop) {
           setActiveSection(contactRef);
-        } else if (scrollPosition >= xRef.current.offsetTop && scrollPosition < contactRef.current.offsetTop) {
-          setActiveSection(xRef);
         } else if (scrollPosition >= oneRef.current.offsetTop && scrollPosition < twoRef.current.offsetTop) {
           setActiveSection(oneRef);
         } else if (scrollPosition >= twoRef.current.offsetTop && scrollPosition < threeRef.current.offsetTop) {
@@ -30,7 +28,7 @@ const Sidebar = ({ homeRef, aboutRef, contactRef, xRef, oneRef, twoRef, threeRef
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
-    }, [homeRef, aboutRef, contactRef, xRef, oneRef, twoRef, threeRef]);
+    }, [homeRef, aboutRef, contactRef, oneRef, twoRef, threeRef]);
   
     const handleItemClick = (ref) => {
       scrollToSection(ref);
