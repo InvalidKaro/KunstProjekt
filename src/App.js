@@ -23,6 +23,7 @@ import rightImage from "./images/konzept_3.png";
 import oceanPlastic from "./images/ocean-bound-plastic-1024x536.jpg";
 import plasticIsland from "./images/plasticisland.jpg";
 import plasticTruck from "./images/plasticjunktruck.jpeg";
+
 /**
  * We create three refs to the sections of our web app. These refs will be
  * passed to the Header component so that it can scroll to the respective
