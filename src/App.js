@@ -129,6 +129,7 @@ function App() {
               width: "100vw",
               height: "100vh",
               zIndex: -1,
+              color: "white"
             }}
             ref={homeRef}
           >
@@ -148,6 +149,7 @@ function App() {
             ref={aboutRef}
           >
             <h2> </h2>
+            {/* Carousel  add text here*/}
             <CCarousel
               controls
               interval={3000}
@@ -195,6 +197,9 @@ function App() {
               </CCarouselItem>
             </CCarousel>
           </Section>
+
+
+          {/* Alles auf eine höhe, gleiche fontsize, centered */}
           <Section
             title="Wir müssen"
             style={{
@@ -209,7 +214,7 @@ function App() {
             </Fade>
           </Section>
           <Section
-            title="Konzept"
+            title=" "
             ref={xRef}
           >
                           <div style={{ alignContent: "center"}}>
@@ -220,7 +225,7 @@ function App() {
           </Section>
           <Section
             title="Konzept"
-            style={{ backgroundColor: "#e3ddf3" }}
+            style={{ backgroundColor: "white" }}
             ref={oneRef}
             // Name titel bild
           >
@@ -245,7 +250,7 @@ function App() {
           Neue Section
           Einzelteil Verbindung
         */}
-          <Section title="" style={{ backgroundColor: "#e3ddf3" }} ref={twoRef}>
+          <Section title="" style={{ backgroundColor: "white" }} ref={twoRef}>
             {/* AIDA Graph Text add*/}
             <div className="row">
               <div className="col-3">
@@ -269,7 +274,7 @@ function App() {
 
           <Section
             title="+3 Section"
-            style={{ backgroundColor: "#e3ddf3" }}
+            style={{ backgroundColor: "white" }}
             ref={threeRef}
           >
             <p>Contact us here.</p>
