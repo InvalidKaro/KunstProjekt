@@ -222,11 +222,11 @@ function App() {
                           <div style={{ alignContent: "center"}}>
                           <p style={{display:"contents", fontSize:"2em", letterSpacing:"0.1em"}}>Above the Surface</p>
 
-                <img src={rightImage} alt="konzept" style={{marginLeft: "180px",maxWidth: "800px", height: "600px"}}/>
+                <img src={rightImage} alt="konzept" style={{marginLeft: "100px",maxWidth: "800px", height: "600px"}}/>
               </div>
           </Section>
           <Section
-            title="Konzept"
+            title=" "
             style={{ backgroundColor: "white" }}
             ref={oneRef}
             // Name titel bild
