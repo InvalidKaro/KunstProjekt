@@ -5,7 +5,7 @@ import {
   faHandHoldingHeart,
   faLightbulb,
   faQuestion,
-  faRightLong
+  faRightLong,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -131,7 +131,7 @@ function App() {
               width: "100vw",
               height: "100vh",
               zIndex: -1,
-              color: "white"
+              color: "white",
             }}
             ref={homeRef}
           >
@@ -200,7 +200,6 @@ function App() {
             </CCarousel>
           </Section>
 
-
           {/* Alles auf eine höhe, gleiche fontsize, centered */}
           <Section
             title="Wir müssen"
@@ -215,15 +214,28 @@ function App() {
               {warnung}
             </Fade>
           </Section>
-          <Section
-            title=" "
-            ref={xRef}
-          >
-                          <div style={{ alignContent: "center"}}>
-                          <p style={{display:"contents", fontSize:"2em", letterSpacing:"0.1em"}}>Above the Surface</p>
+          <Section title=" " ref={xRef}>
+            <div style={{ alignContent: "center" }}>
+              <p
+                style={{
+                  display: "contents",
+                  fontSize: "2em",
+                  letterSpacing: "0.1em",
+                }}
+              >
+                Above the Surface
+              </p>
 
-                <img src={rightImage} alt="konzept" style={{marginLeft: "100px",maxWidth: "800px", height: "600px"}}/>
-              </div>
+              <img
+                src={rightImage}
+                alt="konzept"
+                style={{
+                  marginLeft: "100px",
+                  maxWidth: "800px",
+                  height: "600px",
+                }}
+              />
+            </div>
           </Section>
           <Section
             title=" "
@@ -233,17 +245,31 @@ function App() {
           >
             <div class="container">
               <div class="pic1">
-              <img src={konzeptTop} alt="konzept" style={{maxWidth: "200px", height: "200px"}}/>
-
+                <img
+                  src={konzeptTop}
+                  alt="konzept"
+                  style={{ maxWidth: "200px", height: "200px" }}
+                />
               </div>
               <div class="pic2">
-              <img src={konzeptBottom} alt="konzept" style={{maxWidth: "200px", height: "200px"}}/>
-
+                <img
+                  src={konzeptBottom}
+                  alt="konzept"
+                  style={{ maxWidth: "200px", height: "200px" }}
+                />
               </div>
-              <div class="plus" style={{fontSize:"2em"}}>+</div>
-              <div class="equals"><FontAwesomeIcon icon={faRightLong} size="2x"/></div>
+              <div class="plus" style={{ fontSize: "2em" }}>
+                +
+              </div>
+              <div class="equals">
+                <FontAwesomeIcon icon={faRightLong} size="2x" />
+              </div>
               <div class="pic3">
-                <img src={konzeptNull} alt="konzept" style={{maxWidth: "400px", height: "300px"}}/>
+                <img
+                  src={konzeptNull}
+                  alt="konzept"
+                  style={{ maxWidth: "400px", height: "300px" }}
+                />
               </div>
             </div>
             {/* Concept Graph */}
