@@ -1,6 +1,11 @@
 import "@coreui/coreui/dist/css/coreui.min.css";
 import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
-import { faEye, faHandHoldingHeart, faLightbulb, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEye,
+  faHandHoldingHeart,
+  faLightbulb,
+  faQuestion,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
@@ -11,10 +16,13 @@ import Header from "./components/Header";
 import PasswordComponent from "./components/Password";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Section from "./components/Section";
+import konzeptTop from "./images/konzept_1.jpg";
+import konzeptBottom from "./images/konzept_2.jpg";
+import rightImage from "./images/konzept_3.png";
+
 import oceanPlastic from "./images/ocean-bound-plastic-1024x536.jpg";
 import plasticIsland from "./images/plasticisland.jpg";
 import plasticTruck from "./images/plasticjunktruck.jpeg";
-
 /**
  * We create three refs to the sections of our web app. These refs will be
  * passed to the Header component so that it can scroll to the respective
@@ -155,7 +163,6 @@ function App() {
                     objectFit: "fill",
                     borderRadius: "10px",
                     marginLeft: "130px",
-
                   }}
                 />
               </CCarouselItem>
@@ -169,7 +176,6 @@ function App() {
                     objectFit: "fill",
                     borderRadius: "10px",
                     marginLeft: "130px",
-
                   }}
                 />
               </CCarouselItem>
@@ -197,7 +203,6 @@ function App() {
             }}
             ref={contactRef}
           >
-          
             <Fade direction="up" in>
               {warnung}
             </Fade>
@@ -209,37 +214,49 @@ function App() {
             ref={oneRef}
             // Name titel bild
           >
+            <div class="container">
+              <div class="pic1">
+              <img src={konzeptTop} alt="konzept" style={{maxWidth: "70%", height: "auto"}}/>
+
+              </div>
+              <div class="pic2">
+              <img src={konzeptBottom} alt="konzept" style={{maxWidth: "70%", height: "auto"}}/>
+
+              </div>
+              <div class="\+"></div>
+              <div class="\="></div>
+              <div class="pic3">
+                <img src={rightImage} alt="konzept" style={{maxWidth: "70%", height: "auto"}}/>
+              </div>
+            </div>
             {/* Concept Graph */}
           </Section>
           {/*  
           Neue Section
           Einzelteil Verbindung
         */}
-          <Section
-            title="AIDA"
-            style={{ backgroundColor: "#e3ddf3" }}
-            ref={twoRef}
-          >
+          <Section title="" style={{ backgroundColor: "#e3ddf3" }} ref={twoRef}>
             {/* AIDA Graph Text add*/}
             <div className="row">
               <div className="col-3">
-              <FontAwesomeIcon icon={faEye} />
+                <FontAwesomeIcon icon={faEye} />
                 <p>Attention</p>
               </div>
               <div className="col-3">
-              <FontAwesomeIcon icon={faQuestion} />
+                <FontAwesomeIcon icon={faQuestion} />
                 <p>Interest</p>
               </div>
               <div className="col-3">
-              <FontAwesomeIcon icon={faLightbulb} />
+                <FontAwesomeIcon icon={faLightbulb} />
                 <p>Desire</p>
               </div>
               <div className="col-3">
-              <FontAwesomeIcon icon={faHandHoldingHeart} />
+                <FontAwesomeIcon icon={faHandHoldingHeart} />
                 <p>Action</p>
               </div>
             </div>
           </Section>
+
           <Section
             title="+3 Section"
             style={{ backgroundColor: "#e3ddf3" }}

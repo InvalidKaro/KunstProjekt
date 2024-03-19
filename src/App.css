@@ -96,4 +96,19 @@ body {
   bottom: 20px;
   right: 20px;
 }
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+}
 
+.pic1 { grid-area: 2 / 2 / 4 / 4; }
+
+.pic2 { grid-area: 5 / 2 / 7 / 4; }
+
+.\+ { grid-area: 4 / 2 / 5 / 4; }
+
+.\= { grid-area: 4 / 4 / 5 / 5; }
+
+.pic3 { grid-area: 3 / 5 / 6 / 8; }
