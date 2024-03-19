@@ -5,6 +5,7 @@ import {
   faHandHoldingHeart,
   faLightbulb,
   faQuestion,
+  faRightLong
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -219,7 +220,7 @@ function App() {
             ref={xRef}
           >
                           <div style={{ alignContent: "center"}}>
-                          <p style={{display:"contents"}}>Above the Surface</p>
+                          <p style={{display:"contents", fontSize:"2em", letterSpacing:"0.1em"}}>Above the Surface</p>
 
                 <img src={rightImage} alt="konzept" style={{marginLeft: "180px",maxWidth: "800px", height: "600px"}}/>
               </div>
@@ -239,8 +240,8 @@ function App() {
               <img src={konzeptBottom} alt="konzept" style={{maxWidth: "200px", height: "200px"}}/>
 
               </div>
-              <div class="plus">+</div>
-              <div class="equals">ICON HERE</div>
+              <div class="plus" style={{fontSize:"2em"}}>+</div>
+              <div class="equals"><FontAwesomeIcon icon={faRightLong} size="2x"/></div>
               <div class="pic3">
                 <img src={konzeptNull} alt="konzept" style={{maxWidth: "400px", height: "300px"}}/>
               </div>
