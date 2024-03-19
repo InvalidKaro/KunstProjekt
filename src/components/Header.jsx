@@ -16,7 +16,7 @@ import Sidebar from './Sidebar';
 
 document.title = "Above the Surface";
 
-const Header = ({ homeRef, aboutRef, contactRef, oneRef, twoRef, threeRef, lawRef, scrollToSection }) => {
+const Header = ({ homeRef, aboutRef, contactRef, xRef, oneRef, twoRef, threeRef, lawRef, scrollToSection }) => {
   return (
     // The header element contains the logo and the sidebar
     <header className="App-header">
@@ -27,6 +27,7 @@ const Header = ({ homeRef, aboutRef, contactRef, oneRef, twoRef, threeRef, lawRe
         homeRef={homeRef}
         aboutRef={aboutRef}
         contactRef={contactRef}
+        xRef={xRef}
         oneRef={oneRef}
         twoRef={twoRef}
         threeRef={threeRef}

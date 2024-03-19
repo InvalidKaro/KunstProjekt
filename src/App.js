@@ -16,10 +16,10 @@ import Header from "./components/Header";
 import PasswordComponent from "./components/Password";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Section from "./components/Section";
+import konzeptNull from "./images/konzept_0.png";
 import konzeptTop from "./images/konzept_1.jpg";
 import konzeptBottom from "./images/konzept_2.jpg";
 import rightImage from "./images/konzept_3.png";
-
 import oceanPlastic from "./images/ocean-bound-plastic-1024x536.jpg";
 import plasticIsland from "./images/plasticisland.jpg";
 import plasticTruck from "./images/plasticjunktruck.jpeg";
@@ -39,7 +39,7 @@ function App() {
   const oneRef = useRef(null);
   const twoRef = useRef(null);
   const threeRef = useRef(null);
-
+  const xRef = useRef(null);
   // This function is passed to the Header component so that it can call it
   // when a link is clicked. The function will scroll to the section that the
   // ref points to using the smooth scrolling behaviour.
@@ -92,6 +92,7 @@ function App() {
           oneRef={oneRef}
           twoRef={twoRef}
           threeRef={threeRef}
+          xRef={xRef}
           // We pass the scrollToSection function to the Header so that it can
           // call it when a link is clicked.
           scrollToSection={scrollToSection}
@@ -207,7 +208,16 @@ function App() {
               {warnung}
             </Fade>
           </Section>
+          <Section
+            title="Konzept"
+            ref={xRef}
+          >
+                          <div style={{ alignContent: "center"}}>
+                          <p style={{display:"contents"}}>Above the Surface</p>
 
+                <img src={rightImage} alt="konzept" style={{marginLeft: "180px",maxWidth: "800px", height: "600px"}}/>
+              </div>
+          </Section>
           <Section
             title="Konzept"
             style={{ backgroundColor: "#e3ddf3" }}
@@ -216,17 +226,17 @@ function App() {
           >
             <div class="container">
               <div class="pic1">
-              <img src={konzeptTop} alt="konzept" style={{maxWidth: "70%", height: "auto"}}/>
+              <img src={konzeptTop} alt="konzept" style={{maxWidth: "200px", height: "200px"}}/>
 
               </div>
               <div class="pic2">
-              <img src={konzeptBottom} alt="konzept" style={{maxWidth: "70%", height: "auto"}}/>
+              <img src={konzeptBottom} alt="konzept" style={{maxWidth: "200px", height: "200px"}}/>
 
               </div>
-              <div class="\+"></div>
-              <div class="\="></div>
+              <div class="plus">+</div>
+              <div class="equals">ICON HERE</div>
               <div class="pic3">
-                <img src={rightImage} alt="konzept" style={{maxWidth: "70%", height: "auto"}}/>
+                <img src={konzeptNull} alt="konzept" style={{maxWidth: "400px", height: "300px"}}/>
               </div>
             </div>
             {/* Concept Graph */}
