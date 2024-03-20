@@ -295,7 +295,7 @@ function App() {
         */}
           <Section title="" style={{ backgroundColor: "white" }} ref={twoRef}>
             {/* AIDA Graph Text add*/}
-            <div className="row"style={{ flexWrap: "nowrap", gap:"3em" }}>
+            <div className="row"style={{marginLeft: "-200px",flexWrap: "nowrap", gap:"1.5em" }}>
 
   <div className="col-3 mb-4" style={{ textAlign: "center" }}>
     <FontAwesomeIcon icon={faEye} />

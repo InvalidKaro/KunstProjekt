@@ -57,9 +57,7 @@ const Sidebar = ({ homeRef, aboutRef, contactRef, xRef, oneRef, twoRef, threeRef
         <li className={activeSection === twoRef ? 'active' : ''} onClick={() => handleItemClick(twoRef)}>
           Message
         </li>
-        <li className={activeSection === threeRef ? 'active' : ''} onClick={() => handleItemClick(threeRef)}>
-          Three
-        </li>
+      
       </ul>
     </div>
   );
