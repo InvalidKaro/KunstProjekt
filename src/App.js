@@ -229,7 +229,7 @@ function App() {
              {warnung}
             </Fade>
           </Section>
-          <Section title=" " ref={xRef}>
+          <Section title=" " ref={contactRef}>
             <div style={{ alignContent: "center" }}>
               <p
                 style={{
@@ -344,7 +344,7 @@ function App() {
 <Section
   title="Contact Us"
   style={{ backgroundColor: "#f2f2f2" }}
-  ref={contactRef}
+  ref={xRef}
 >
 
 </Section>

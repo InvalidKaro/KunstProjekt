@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import "../style/Sidebar.css";
+
 const Sidebar = ({ homeRef, aboutRef, contactRef, xRef, oneRef, twoRef, threeRef, scrollToSection }) => {
   const [activeSection, setActiveSection] = useState(null);
-   
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      
+
       if (scrollPosition < aboutRef.current.offsetTop) {
         setActiveSection(homeRef);
       } else if (scrollPosition >= aboutRef.current.offsetTop && scrollPosition < contactRef.current.offsetTop) {
@@ -24,10 +25,10 @@ const Sidebar = ({ homeRef, aboutRef, contactRef, xRef, oneRef, twoRef, threeRef
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [homeRef, aboutRef, contactRef, xRef, oneRef, twoRef, threeRef]);
 
@@ -39,27 +40,27 @@ const Sidebar = ({ homeRef, aboutRef, contactRef, xRef, oneRef, twoRef, threeRef
   return (
     <div className="sidebar">
       <ul>
-        <li className={activeSection === homeRef ? 'active' : ''} onClick={() => handleItemClick(homeRef)}>
+        <li className={activeSection === homeRef ? "active" : ""} onClick={() => handleItemClick(homeRef)}>
           Home
         </li>
-        <li className={activeSection === aboutRef ? 'active' : ''} onClick={() => handleItemClick(aboutRef)}>
+        <li className={activeSection === aboutRef ? "active" : ""} onClick={() => handleItemClick(aboutRef)}>
           Gefahr
         </li>
-        <li className={activeSection === contactRef ? 'active' : ''} onClick={() => handleItemClick(contactRef)}>
+        <li className={activeSection === contactRef ? "active" : ""} onClick={() => handleItemClick(contactRef)}>
           Warnung
         </li>
-        <li className={activeSection === xRef ? 'active' : ''} onClick={() => handleItemClick(xRef)}>
+        <li className={activeSection === xRef ? "active" : ""} onClick={() => handleItemClick(xRef)}>
           Above the Surface
         </li>
-        <li className={activeSection === oneRef ? 'active' : ''} onClick={() => handleItemClick(oneRef)}>
+        <li className={activeSection === oneRef ? "active" : ""} onClick={() => handleItemClick(oneRef)}>
           Konzept
         </li>
-        <li className={activeSection === twoRef ? 'active' : ''} onClick={() => handleItemClick(twoRef)}>
+        <li className={activeSection === twoRef ? "active" : ""} onClick={() => handleItemClick(twoRef)}>
           Message
         </li>
-      
       </ul>
     </div>
   );
 };
-export default Sidebar
+
+export default Sidebar;
