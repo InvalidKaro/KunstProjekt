@@ -17,13 +17,13 @@ import Header from "./components/Header";
 import PasswordComponent from "./components/Password";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Section from "./components/Section";
+import A from "./images/gefahr2-A.png";
+import B from "./images/gefahr2-B.png";
+import C from "./images/gefahr2-C.png";
 import konzeptNull from "./images/konzept_0.png";
 import konzeptTop from "./images/konzept_1.jpg";
 import konzeptBottom from "./images/konzept_2.jpg";
 import rightImage from "./images/konzept_3.png";
-import oceanPlastic from "./images/ocean-bound-plastic-1024x536.jpg";
-import plasticIsland from "./images/plasticisland.jpg";
-import plasticTruck from "./images/plasticjunktruck.jpeg";
 
 /**
  * We create three refs to the sections of our web app. These refs will be
@@ -51,14 +51,14 @@ function App() {
     }
   };
   const changeWarnung = useCallback(() => {
-    setWarnung("erkennen");
+    setWarnung("Wir müssen erkennen");
     // make a timed changing
     setTimeout(() => {
-      setWarnung(" aufklären");
+      setWarnung("Wir müssen aufklären");
     }, 1000);
 
     setTimeout(() => {
-      setWarnung("handeln");
+      setWarnung("Wir müssen handeln");
     }, 3000);
     // Loop
     setTimeout(() => {
@@ -90,11 +90,12 @@ function App() {
           // respective sections when a link is clicked.
           homeRef={homeRef}
           aboutRef={aboutRef}
-          contactRef={contactRef}
           oneRef={oneRef}
           twoRef={twoRef}
           threeRef={threeRef}
           xRef={xRef}
+          contactRef={contactRef}
+
           // We pass the scrollToSection function to the Header so that it can
           // call it when a link is clicked.
           scrollToSection={scrollToSection}
@@ -147,21 +148,33 @@ function App() {
 
           <Section
             title="  "
-            style={{ backgroundColor: "black", color: "white" }}
+            style={{ backgroundColor: "black", color: "white", height:"200vh" }}
             ref={aboutRef}
-          >
+          >            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
             <h2> Die Meere versinken im Müll </h2>
+            <br></br>            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
             {/* Carousel  add text here*/}
             <CCarousel
               controls
               interval={3000}
               className="d-flex justify-content-center align-items-end"
-              style={{ maxWidth: "1000px", marginLeft: "150px" }}
+              style={{ maxWidth: "2000px", marginLeft: "" }}
             >
               <CCarouselItem>
                 <CImage
                   className="d-block w-800"
-                  src={oceanPlastic}
+                  src={A}
                   alt="slide 1"
                   style={{
                     maxHeight: "550px",
@@ -174,7 +187,7 @@ function App() {
               <CCarouselItem>
                 <CImage
                   className="d-block w-800"
-                  src={plasticIsland}
+                  src={B}
                   alt="slide 2"
                   style={{
                     maxHeight: "550px",
@@ -187,7 +200,7 @@ function App() {
               <CCarouselItem>
                 <CImage
                   className="d-block w-800"
-                  src={plasticTruck}
+                  src={C}
                   alt="slide 3"
                   style={{
                     maxHeight: "550px",
@@ -198,21 +211,22 @@ function App() {
                 />
               </CCarouselItem>
             </CCarousel>
+          
           </Section>
 
           {/* Alles auf eine höhe, gleiche fontsize, centered */}
           <Section
-            title="Wir müssen"
+            title=" "
             style={{
               backgroundColor: "white",
               color: "#377f7e",
               fontWeight: "bold",
-            
+              display: "flex"
             }}
             ref={contactRef}
           >
-            <Fade direction="up" in style={{ fontSize:"2em"}}>
-              {warnung}
+            <Fade direction="up" in style={{ maxWidth: "800px", fontSize:"2em", display:"flex"}}>
+             {warnung}
             </Fade>
           </Section>
           <Section title=" " ref={xRef}>
@@ -281,24 +295,34 @@ function App() {
         */}
           <Section title="" style={{ backgroundColor: "white" }} ref={twoRef}>
             {/* AIDA Graph Text add*/}
-            <div className="row">
-              <div className="col-3">
-                <FontAwesomeIcon icon={faEye} />
-                <p>Attention</p>
-              </div>
-              <div className="col-3">
-                <FontAwesomeIcon icon={faQuestion} />
-                <p>Interest</p>
-              </div>
-              <div className="col-3">
-                <FontAwesomeIcon icon={faLightbulb} />
-                <p>Desire</p>
-              </div>
-              <div className="col-3">
-                <FontAwesomeIcon icon={faHandHoldingHeart} />
-                <p>Action</p>
-              </div>
-            </div>
+            <div className="row"style={{ flexWrap: "nowrap", gap:"3em" }}>
+
+  <div className="col-3 mb-4" style={{ textAlign: "center" }}>
+    <FontAwesomeIcon icon={faEye} />
+    <p style={{ marginTop: "10px" }}>Attention</p>
+    <p style={{ marginTop: "10px" }}>Auffälligkeit der schwebenden Elemente</p>
+
+  </div>
+  <div className="col-3 mb-4" style={{ textAlign: "center" }}>
+    <FontAwesomeIcon icon={faQuestion} />
+    <p style={{ marginTop: "10px" }}>Interest</p>
+    <p style={{ marginTop: "10px" }}>Besonderheit der Mülltüten am Teich</p>
+
+  </div>
+  <div className="col-3 mb-4" style={{ textAlign: "center" }}>
+    <FontAwesomeIcon icon={faLightbulb} />
+    <p style={{ marginTop: "10px" }}>Desire</p>
+    <p style={{ marginTop: "10px" }}>Message: Warnung vor Mülldystopie</p>
+
+  </div>
+  <div className="col-3 mb-4" style={{ textAlign: "center" }}>
+    <FontAwesomeIcon icon={faHandHoldingHeart} />
+    <p style={{ marginTop: "10px" }}>Action</p>
+    <p style={{ marginTop: "10px" }}>Motivation zur Handlung</p>
+
+  </div>
+</div>
+
             <br></br>
             <br></br>
             <br></br>
